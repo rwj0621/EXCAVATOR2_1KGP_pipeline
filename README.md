@@ -12,5 +12,14 @@
         conda install -c conda-forge r-hmisc -y 
         R -e 'library(Hmisc); print("Hmisc 工作正常！")'
         library(Hmisc) 加载/导入名为 Hmisc 的 R 包
+* 安装Perl (版本 ≥ 5.8.8)
 
+        conda install -c conda-forge perl -y
+* 安装SAMtools (版本 ≥ 0.1.17)
+
+        #通过conda安装SAMtools
+        conda install -c bioconda samtools -y
+        #验证安装
+        samtools --version
+        Using htslib 1.22.1
   
