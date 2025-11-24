@@ -101,3 +101,14 @@
             --processors 4 \
             --target 1000GP_Target_20000 \
             --assembly hg19
+## EXCAVATORDataAnalysis.pl
+* 创建样本 ExperimentalFileAnalysis.w20K.txt
+* 运行 EXCAVATORDataAnalysis.pl
+  
+        perl EXCAVATORDataAnalysis.pl
+        /data/renweijie/1000GP/1000GP_prosecced_20k/ExperimentalFileAnalysis.w20K.txt \
+            --processors 8 \
+            --target 1000GP_Target_20000 \
+            --assembly hg19 \
+            --output /data/renweijie/1000GP/1KGP_CNV_Results_20K \
+            --mode pooling
