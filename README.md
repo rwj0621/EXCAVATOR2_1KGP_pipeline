@@ -85,3 +85,16 @@
         /data/renweijie/1000GP/1000GP_prosecced_20k/SourceTarget.txt \
         /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed \
         1000GP_Target_20000 20000 hg19
+  * 问题：libpng12.so.0缺失
+  * 解决方案
+    
+          #进入临时目录 
+          cd /tmp 
+          #从UCSC官网下载最新版（无需libpng12依赖）
+          wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/bigWigAverageOverBed 
+          #添加执行权限 
+          chmod +x bigWigAverageOverBed
+          # 替换为新下载的版本
+          cp /tmp/bigWigAverageOverBed /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/
+          #确保执行权限
+          chmod +x /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/bigWigAverageOverBed
