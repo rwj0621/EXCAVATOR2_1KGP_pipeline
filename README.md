@@ -70,7 +70,7 @@
           }'  /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/exome_pull_down_targets_phases1_and_2/20120518.exome.consensus.bed | \
           sort -k1,1V -k2,2n -k3,3n | \
           uniq > /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed
-* 准备SourceTarget.txt SourceTarget.txt
+* 准备源目标映射文件 [SourceTarget.txt](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/SourceTarget.txt)
 * 运行TargetPerla.pl
   
         cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2
@@ -92,7 +92,7 @@
           #确保执行权限
           chmod +x /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/bigWigAverageOverBed
 ## EXCAVATORDataPrepare.pl
-* 创建样本清单文件 [ExperimentalFileAnalysis.w20K.txt](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/ExperimentalFileAnalysis.w20K.txt)
+* 创建样本清单文件 [ExperimentalFilePrepare.w20000.txt](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/ExperimentalFilePrepare.w20000.txt)
 * 运行EXCAVATORDataPrepare.pl
 
         cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2
@@ -102,7 +102,7 @@
             --target 1000GP_Target_20000 \
             --assembly hg19
 ## EXCAVATORDataAnalysis.pl
-* 创建样本 ExperimentalFileAnalysis.w20K.txt
+* 创建样本 [ExperimentalFileAnalysis.w20K.txt](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/ExperimentalFileAnalysis.w20K.txt)
 * 运行 EXCAVATORDataAnalysis.pl
   
         perl EXCAVATORDataAnalysis.pl
