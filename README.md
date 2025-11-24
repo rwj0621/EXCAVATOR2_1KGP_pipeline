@@ -49,5 +49,5 @@
         ls $EXCAVATOR2_HOME
 # 三、处理BAM文件
 * 使用SAMtools进行处理、排序和过滤（丢弃MQ < 10的读段）
-
+[process_1kg_bams.sh](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/process_1kg_bams.sh)
 
