@@ -22,4 +22,29 @@
         #验证安装
         samtools --version
         Using htslib 1.22.1
+* 安装EXCAVATOR2依赖的编译工具
   
+        #安装编译工具 
+        conda install -c conda-forge gcc gfortran make -y
+* 编译Fortran子程序
+
+        #进入lib/F77目录
+        cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/F77
+        #编译两个Fortran文件
+        R CMD SHLIB F4R.f
+        R CMD SHLIB FastJointSLMLibraryI.f
+* 设置环境变量
+
+        #把EXCAVATOR2路径添加到配置文件
+        echo 'export EXCAVATOR2_HOME="/data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2"' >> ~/.bashrc 
+        #把路径加入到系统PATH中
+        echo 'export PATH=$PATH:$EXCAVATOR2_HOME' >> ~/.bashrc
+        #立即生效
+        source ~/.bashrc
+
+        #检查环境变量
+        echo $EXCAVATOR2_HOME
+
+        #检查文件是否存在
+        ls $EXCAVATOR2_HOME
+
