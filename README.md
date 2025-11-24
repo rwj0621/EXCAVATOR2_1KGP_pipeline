@@ -69,5 +69,10 @@
               print chrom "\t" $2 "\t" $3
           }'  /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/exome_pull_down_targets_phases1_and_2/20120518.exome.consensus.bed | \
           sort -k1,1V -k2,2n -k3,3n | \
-          uniq > /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed 
+          uniq > /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed
+* 准备SourceTarget.txt
+  
+        #创建分析目录
+        mkdir -p /data/renweijie/1000GP/1000GP_prosecced_20k
+        #创建SourceTarget.txt配置文件
         
