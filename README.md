@@ -47,4 +47,7 @@
 
         #检查文件是否存在
         ls $EXCAVATOR2_HOME
+# 三、处理BAM文件
+* 使用SAMtools进行处理、排序和过滤（丢弃MQ < 10的读段）
+
 
