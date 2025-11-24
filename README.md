@@ -57,4 +57,17 @@
   * bed文件带chr且只有3列 符合工具要求
   * bam文件不带chr
   * 对bed文件排序、去重、去除chr
+    
+          #使用awk处理BED文件：去除chr前缀、排序、去重
+          awk '
+          {
+              #去除chr前缀
+              chrom = $1
+              sub(/^chr/, "", chrom)
+    
+              #输出处理后的行
+              print chrom "\t" $2 "\t" $3
+          }'  /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/exome_pull_down_targets_phases1_and_2/20120518.exome.consensus.bed | \
+          sort -k1,1V -k2,2n -k3,3n | \
+          uniq > /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed 
         
