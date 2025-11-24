@@ -75,4 +75,13 @@
         #创建分析目录
         mkdir -p /data/renweijie/1000GP/1000GP_prosecced_20k
         #创建SourceTarget.txt配置文件
-        
+        touch SourceTarget
+        /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/data/ucsc.hg19.bw
+        /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/hs37d5.fa
+* 运行TargetPerla.pl
+  
+        cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2
+        perl TargetPerla.pl \
+        /data/renweijie/1000GP/1000GP_prosecced_20k/SourceTarget.txt \
+        /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed \
+        1000GP_Target_20000 20000 hg19
