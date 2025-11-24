@@ -70,14 +70,7 @@
           }'  /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/exome_pull_down_targets_phases1_and_2/20120518.exome.consensus.bed | \
           sort -k1,1V -k2,2n -k3,3n | \
           uniq > /data/renweijie/1000GP/1000GP_prosecced/20120518.exome.consensus.processed.bed
-* 准备SourceTarget.txt
-  
-        #创建分析目录
-        mkdir -p /data/renweijie/1000GP/1000GP_prosecced_20k
-        #创建SourceTarget.txt配置文件
-        touch SourceTarget
-        /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/data/ucsc.hg19.bw
-        /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/hs37d5.fa
+* 准备SourceTarget.txt SourceTarget.txt
 * 运行TargetPerla.pl
   
         cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2
@@ -98,3 +91,13 @@
           cp /tmp/bigWigAverageOverBed /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/
           #确保执行权限
           chmod +x /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/bigWigAverageOverBed
+## EXCAVATORDataPrepare.pl
+* 创建样本清单文件 ExperimentalFilePrepare.w20000.txt
+* 运行EXCAVATORDataPrepare.pl
+
+        cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2
+        perl EXCAVATORDataPrepare.pl \
+            /data/renweijie/1000GP/1000GP_prosecced_20k/ExperimentalFilePrepare.w20000.txt \
+            --processors 4 \
+            --target 1000GP_Target_20000 \
+            --assembly hg19
