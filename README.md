@@ -50,4 +50,11 @@
 # 三、处理BAM文件
 * 使用SAMtools进行处理、排序和过滤（丢弃MQ < 10的读段）
 [process_1kg_bams.sh](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/process_1kg_bams.sh)
-
+# 四、EXVACATOR2 pipeline
+## TargetPerla.pl
+* 准备靶区定义文件
+  * 格式要求 纯文本，制表符分隔，至少包含三列：染色体、起始位置、终止位置
+  * bed文件带chr且只有3列 符合工具要求
+  * bam文件不带chr
+  * 对bed文件排序、去重、去除chr
+        
