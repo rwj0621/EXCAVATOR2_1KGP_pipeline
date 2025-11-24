@@ -1,1 +1,1 @@
-
+/data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/data/ucsc.hg19.bw /data/share/liuyuxin_tanrenjie/1KGP/EXCAVATOR2_8_data/reference/hs37d5.fa
