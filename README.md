@@ -92,7 +92,7 @@
           #确保执行权限
           chmod +x /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/bigWigAverageOverBed
 ## EXCAVATORDataPrepare.pl
-* 创建样本清单文件 ExperimentalFilePrepare.w20000.txt
+* 创建样本清单文件 [ExperimentalFileAnalysis.w20K.txt](https://github.com/rwj0621/EXCAVATOR2_1KGP_pipeline/blob/main/ExperimentalFileAnalysis.w20K.txt)
 * 运行EXCAVATORDataPrepare.pl
 
         cd /data/renweijie/1000GP/tools/EXCAVATOR2_Package_v1.1.2
